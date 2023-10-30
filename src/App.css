@@ -297,7 +297,7 @@ span {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  z-index: 2000;
+ 
 }
 .addnew {
   display: flex;
@@ -316,7 +316,7 @@ span {
   height: 170px;
   width: 150px;
   margin: 10px;
-  z-index: 2000;
+
 }
 .control {
   position: relative;

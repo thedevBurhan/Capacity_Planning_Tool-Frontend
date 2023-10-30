@@ -62,7 +62,7 @@ const DashBoard = ({ children }) => {
   const history = useHistory();
   function personal() {
     if (typeof window !== "undefined" && window.localStorage) {
-      window.localStorage.setItem("type", "Personal");
+      window.localStorage.setItem("Personal", "Personal");
       history.push("/Personal");
     } else {
       console.error("localStorage is not available in this browser.");
@@ -72,7 +72,7 @@ const DashBoard = ({ children }) => {
 
   function work() {
     if (typeof window !== "undefined" && window.localStorage) {
-      window.localStorage.setItem("type", "Work");
+      window.localStorage.setItem("Work", "Work");
       history.push("/Work");
     } else {
       console.error("localStorage is not available in this browser.");

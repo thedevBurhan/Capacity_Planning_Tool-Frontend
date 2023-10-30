@@ -76,6 +76,7 @@ const Work = () => {
   };
   useEffect(() => {
     getTodolist();
+  
   }, []);
   // for delete ToDoliSt
   const delToDoliSt = async (id) => {
