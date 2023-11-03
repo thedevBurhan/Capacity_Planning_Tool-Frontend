@@ -32,7 +32,7 @@ const Meeting = () => {
       formData.append('code', authorizationCode);
       formData.append('redirectUri', redirectUri);
       
-      axios.post("api/callback", formData, {
+      axios.post("https://capacity-planning-tool.netlify.app/api/callback", formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
