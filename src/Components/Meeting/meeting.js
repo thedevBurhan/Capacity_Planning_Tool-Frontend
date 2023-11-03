@@ -22,12 +22,13 @@ const Meeting = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const authorizationCode = urlParams.get("code");
     console.log(authorizationCode,"authorizationCode");
+    console.log(urlParams,"urlParams");
 
     if (authorizationCode) {
       setLoading(true);
       const redirectUri = encodeURIComponent(`${window.location.origin}/zoom/callback`);
       console.log(redirectUri,"redirectUri")
-      axios.post("/api/callback", { code: authorizationCode, redirectUri })
+      axios.post("https://capacity-planning-tool.netlify.app/api/callback", { code: authorizationCode, redirectUri })
         .then(response => {
           console.log(response);
           const { access_token } = response.data;
