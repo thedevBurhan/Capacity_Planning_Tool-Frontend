@@ -28,7 +28,15 @@ const Meeting = () => {
       setLoading(true);
       const redirectUri = encodeURIComponent(`${window.location.origin}/zoom/callback`);
       console.log(redirectUri,"redirectUri")
-      axios.post("https://capacity-planning-tool.netlify.app/api/callback", { code: authorizationCode, redirectUri })
+      const formData = new URLSearchParams();
+      formData.append('code', authorizationCode);
+      formData.append('redirectUri', redirectUri);
+      
+      axios.post("https://capacity-planning-tool.netlify.app/api/callback", formData, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
         .then(response => {
           console.log(response);
           const { access_token } = response.data;
