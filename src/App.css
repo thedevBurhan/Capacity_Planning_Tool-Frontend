@@ -9,10 +9,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-.mainBg {
-  background: linear-gradient(110deg, #f4decb 60%, #f8eee7 60%);
-  height: 100vh;
-}
+
 .mainBgDashboard {
   background: linear-gradient(-146deg, #f0f0f0 60%, #fefbf9 60%);
   height: 100vh;
@@ -21,30 +18,18 @@ header {
   display: flex !important;
   flex-direction: row !important;
 }
-.bg {
-  background-color: #f2c4ce;
-  border-radius: 20px;
-  box-shadow: #f8eee7 0px 3px 8px;
-  width: 750px !important;
-  text-align: center;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #000000;
-}
-.form {
+/* .form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column !important;
-}
-.button-Bg {
+} */
+/* .button-Bg {
   background-color: #f8eee7 !important;
   color: #2c2b30 !important;
   border: 1px solid #f4decb !important;
-}
+} */
 
 .heading {
   color: #2c2b30;
@@ -57,7 +42,7 @@ header {
 .app-heading {
   margin-top: 100px;
   margin-bottom: 18px;
-  font-size: 42px;
+  font-size: 3rem;
   color: #2c2b30;
 }
 .main-component {
@@ -67,66 +52,22 @@ header {
   justify-content: center;
   align-items: center;
 }
-.container {
+/* .container {
   width: 750px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.04),
     0 6.7px 5.3px rgba(0, 0, 0, 0.04), 0 12.5px 10px rgba(0, 0, 0, 0),
     0 22.3px 17.9px rgba(0, 0, 0, 0.01), 0 41.8px 33.4px rgba(0, 0, 0, 0.01),
     0 100px 80px rgba(0, 0, 0, 0.1);
   border-radius: 20px !important;
-}
-.forget-password {
-  font-size: smaller;
-  color: #2c2b30;
-  cursor: pointer;
-}
-.forget-password:hover {
-  color: #f2c4ce;
-}
-.button {
-  margin: 20px 0 2px 15px;
-}
-.register {
-  font-size: 12px;
-  margin-left: 15px;
-  padding: 5px;
-  color: #2c2b30;
-}
-.register-new {
-  margin-left: -8px;
-  color: #2c2b30;
-  font-size: 14px;
-}
-span {
-  color: #94618e;
-  cursor: pointer;
-}
-
-.Reg {
+} */
+.table {
   display: flex;
   flex-direction: row;
-  margin-left: 120px;
-}
-.password {
-  color: #2c2b30;
-  font-size: smaller;
-}
-
-.logout {
-  position: absolute;
-  left: 2.5%;
-  bottom: 0;
-  padding: 10px;
-}
-.Table {
-  display: flex;
-
-  flex-direction: row;
-
-  margin: 25px 35px 0 35px !important;
-  justify-content: space-between;
-
-  width: auto;
+  /* border: 1px solid black; */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.152);
+  margin: 0 auto!important;
+  justify-content: center;
+  width: auto !important;
 }
 .user-table {
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -142,25 +83,29 @@ span {
   margin: 5px 0 5px 0;
 }
 
+.App-heading {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px;
+}
+.Application-title {
+  /* border: 1px solid gray; */
+  font-size: 1rem;
+}
+.Descreption {
+  margin-left: 60px;
+  font-size: smaller;
+  color: darkgray;
+  padding: 10px;
+}
 .Logo {
-  position: absolute;
-  left: 1420px;
-  top: 1px;
-  width: 75px;
+  width: auto;
+  height: 85px;
 }
-.capacityplanningHaeding {
-  position: absolute;
-  top: 20px;
-  right: 120px;
-}
-.subDhead {
-  position: absolute;
-  top: 70px;
-  left: 900px;
-  z-index: 1000;
-  color: #f68585;
-}
-
 .box {
   padding-right: 15px;
   background-color: #f8eee7;
@@ -178,11 +123,10 @@ span {
 }
 
 .imggif {
-  position: absolute;
-  top: 25%;
-  right: 8%;
-  width: 980px;
-  height: 500px;
+  /* border: 1px solid black; */
+  width: 93%;
+  height:550px;
+  margin:5px 50px;
   border-radius: 20px;
   mix-blend-mode: darken;
 }
@@ -198,7 +142,6 @@ span {
   padding: 15px;
   border-radius: 20px;
   width: 350px;
-
   background-color: #f8eee7;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -225,83 +168,37 @@ span {
   flex-direction: row;
   flex-wrap: wrap;
   width: auto;
-
   justify-content: center;
   align-items: center;
 }
-.box-dashboard {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: auto;
-}
-.Menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 280px;
-  height: 93.4vh !important;
-  padding-top: 45px;
 
-  background-color: #f0f0f0;
-  border-radius: 0 20px 20px 0;
-  box-shadow: 0px 6px 19px -3px rgba(0, 0, 0, 0.1),
-    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-.avatar {
-  margin-top: 30px;
-  margin-left: 80px;
-  width: 6rem !important;
-  height: 6rem !important;
 
-  box-shadow: 0px 6px 19px -3px rgba(0, 0, 0, 0.1),
-    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-.dusername {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 20px 0 20px 65px;
-}
-.tags {
-  margin-top: -280px !important;
-  margin-left: 35px !important;
-}
-.nav {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
 
-  margin-top: -40px;
-  margin-bottom: 0px !important;
-
-  width: auto;
-}
 .Heading {
   margin: 15px;
 }
 .note {
-  margin-left: 25px;
+  margin:0 65px;
+  /* border: 1px solid black; */
 }
 .StickyWall-container {
   border: 1px solid #2c2b3017;
-  margin: 22px;
-  height: 560px;
-  width: 1190px;
-
+  margin: 10px 50px;
+  height: auto;
+  width: auto;
   box-shadow: 0px 6px 19px -3px rgba(0, 0, 0, 0.1),
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
- 
+  justify-content: center;
 }
 .addnew {
   display: flex;
   flex-direction: row;
+  margin: 0 50px;
+  font-size: 1rem;
+  /* border: 1px solid black; */
 }
 
 .card {
@@ -316,7 +213,6 @@ span {
   height: 170px;
   width: 150px;
   margin: 10px;
-
 }
 .control {
   position: relative;
@@ -336,18 +232,40 @@ span {
   gap: 2px;
   margin-top: 10px;
 }
-.table {
-  margin-top: 26px;
-  margin-left: 75px;
-  z-index: 1000;
-}
 .TimeSheet-container {
-  margin: 22px;
-  height: 430px;
-  width: 1190px;
-  box-shadow: 0px 6px 19px -3px rgba(0, 0, 0, 0.1),
-    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  height: auto;
+  width: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.152);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media (max-width: 786px) {
+  .app-heading {
+    font-size: 2rem;
+  }
+  .Application-title {
+    font-size: 0.6rem;
+  }
+  .Descreption {
+    margin-left: 30px;
+  }
+  .Logo {
+    width: auto;
+    height: 40px;
+  }
+  .imggif {
+    /* border: 1px solid black; */
+    width: 93%;
+    height:400px;
+    margin:2px 25px;
+  }
+  .addnew {
+    font-size: 0.5rem;
+    /* border: 1px solid black; */
+  }
+  .note{
+    font-size: 12px;
+  }
 }

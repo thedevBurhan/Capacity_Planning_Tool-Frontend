@@ -1,5 +1,5 @@
 import React from "react";
-import gifs from "./capacity-planning.gif";
+import gifs from "./gif.gif";
 import DashBoard from "./Dashboard";
 
 const gif = () => {
