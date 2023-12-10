@@ -178,7 +178,7 @@ const Meeting = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const authorizationCode = urlParams.get("code");
-
+    console.log (authorizationCode);
     if (authorizationCode) {
       setLoading(true);
       const formData = new URLSearchParams();
@@ -199,6 +199,7 @@ const Meeting = () => {
           }
         })
         .then(response => {
+          console.log(response.data);
           setUserData(response.data);
           setLoading(false);
         })
