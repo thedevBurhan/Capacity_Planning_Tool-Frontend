@@ -7,7 +7,7 @@ import axios from "axios";
 // //configure thhe environment
 // dotenv.config();
 const CLIENTID = "Xu8dJsqkSEiUHAb4aFauA";
-const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool-backend.vercel.app/Meeting/zoom/");
+const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool-backend.vercel.app/zoom/");
 
 
 const Meeting = () => {
