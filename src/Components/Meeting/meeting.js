@@ -1,13 +1,27 @@
 import React ,{ useState, useEffect } from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 16ae528c72803da4dbc175facd601e11ae174567
 import axios from "axios";
 // import Backdrop from '@mui/material/Backdrop';
 // import CircularProgress from '@mui/material/CircularProgress';
 // import Button from '@mui/material/Button';
+<<<<<<< HEAD
+=======
+
+
+ 
+>>>>>>> 16ae528c72803da4dbc175facd601e11ae174567
 // import dotenv from "dotenv";
 // //configure thhe environment
 // dotenv.config();
 const CLIENTID = "Xu8dJsqkSEiUHAb4aFauA";
+<<<<<<< HEAD
 const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool-backend.vercel.app/Meeting/zoom/");
+=======
+const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool.netlify.app/Meeting/zoom/");
+>>>>>>> 16ae528c72803da4dbc175facd601e11ae174567
 
 
 const Meeting = () => {
