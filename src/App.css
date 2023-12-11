@@ -25,7 +25,10 @@ header {
   color: #2c2b30 !important;
   border: 1px solid #f4decb !important;
 } */
-
+.dash{
+  font-size: smaller;
+  cursor: pointer;
+}
 .heading {
   color: #2c2b30;
   margin-bottom: 10px;
@@ -109,12 +112,23 @@ header {
   height: 10%;
   width: 95%;
 }
-
-.imggif {
+.giff{
   /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+}
+.imggifs{
+  /* border: 1px solid black; */
+  width:50%;
+  height:500px;
+  border-radius: 20px;
+  mix-blend-mode: darken;
+}
+.imggif {
+  
   width: 93%;
   height:550px;
-  margin:5px 50px;
+  margin:0px 100px;
   border-radius: 20px;
   mix-blend-mode: darken;
 }
