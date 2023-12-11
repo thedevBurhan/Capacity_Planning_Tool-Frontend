@@ -9,10 +9,14 @@ header {
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
 /* .mainBg {
   background: linear-gradient(110deg, #f4decb 60%, #f8eee7 60%);
   height: 100vh;
 } */
+=======
+
+>>>>>>> origin/main
 .mainBgDashboard {
   background: linear-gradient(-146deg, #f0f0f0 60%, #fefbf9 60%);
   height: 100vh;
@@ -21,6 +25,7 @@ header {
   display: flex !important;
   flex-direction: row !important;
 }
+<<<<<<< HEAD
 /* .bg {
   background-color: #f2c4ce;
   border-radius: 20px;
@@ -34,16 +39,20 @@ header {
   color: #000000;
 } */
 .form {
+=======
+
+/* .form {
+>>>>>>> origin/main
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column !important;
-}
-.button-Bg {
+} */
+/* .button-Bg {
   background-color: #f8eee7 !important;
   color: #2c2b30 !important;
   border: 1px solid #f4decb !important;
-}
+} */
 
 .heading {
   color: #2c2b30;
@@ -66,14 +75,18 @@ header {
   justify-content: center;
   align-items: center;
 }
-.container {
+/* .container {
   width: 750px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.04),
     0 6.7px 5.3px rgba(0, 0, 0, 0.04), 0 12.5px 10px rgba(0, 0, 0, 0),
     0 22.3px 17.9px rgba(0, 0, 0, 0.01), 0 41.8px 33.4px rgba(0, 0, 0, 0.01),
     0 100px 80px rgba(0, 0, 0, 0.1);
   border-radius: 20px !important;
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> origin/main
 .table {
   display: flex;
   flex-direction: row;
