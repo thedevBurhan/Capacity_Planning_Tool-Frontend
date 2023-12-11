@@ -1,22 +1,18 @@
 import React ,{ useState, useEffect } from "react";
-
 import axios from "axios";
 // import Backdrop from '@mui/material/Backdrop';
 // import CircularProgress from '@mui/material/CircularProgress';
 // import Button from '@mui/material/Button';
-
-
- 
 // import dotenv from "dotenv";
 // //configure thhe environment
 // dotenv.config();
 const CLIENTID = "Xu8dJsqkSEiUHAb4aFauA";
-const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool.netlify.app/Meeting/zoom/");
+const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool-backend.vercel.app/Meeting/zoom/");
 
 
-// const Meeting = () => {
-//   const [userData, setUserData] = useState(null);
-//   const [loading, setLoading] = useState(false);
+const Meeting = () => {
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -68,23 +64,23 @@ const REDIRECTURL = encodeURIComponent("https://capacity-planning-tool.netlify.a
     window.location.href = oauthUrl;
   };
 
-//   return (
-//     <div>
-//       <h1>Zoom OAuth Integration</h1>
-//       {loading ? (
-//         <p>Loading...</p>
-//       ) : userData ? (
-//         <div>
-//           <h2>Hello {userData.first_name} {userData.last_name}!</h2>
-//           <p>{userData.role_name}, {userData.company}</p>
-//           <img src={userData.pic_url} alt="User" />
-//         </div>
-//       ) : (
-//         <button onClick={handleOAuthClick}>Authenticate with Zoom</button>
-//       )}
-//     </div>
-//   );
-// };
+  return (
+    <div>
+      <h1>Zoom OAuth Integration</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : userData ? (
+        <div>
+          <h2>Hello {userData.first_name} {userData.last_name}!</h2>
+          <p>{userData.role_name}, {userData.company}</p>
+          <img src={userData.pic_url} alt="User" />
+        </div>
+      ) : (
+        <button onClick={handleOAuthClick}>Authenticate with Zoom</button>
+      )}
+    </div>
+  );
+};
 
 export default Meeting;
 
@@ -169,77 +165,3 @@ export default Meeting;
 // // };
 
 // export default Meeting;
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-const CLIENT_ID = 'Xu8dJsqkSEiUHAb4aFauA';
-const REDIRECT_URL = encodeURIComponent(`${window.location.origin}/zoom/callback`);
-
-const Meeting = () => {
-  const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const authorizationCode = urlParams.get("code");
-    console.log (authorizationCode);
-    if (authorizationCode) {
-      setLoading(true);
-      const formData = new URLSearchParams();
-      formData.append('code', authorizationCode);
-      formData.append('redirectUri', REDIRECT_URL);
-
-      axios.post("https://capacity-planning-tool-backend.vercel.app/Meeting/zoom/", formData, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      })
-      .then(response => {
-        const { access_token } = response.data;
-
-        axios.get("https://api.zoom.us/v2/users/me", {
-          headers: {
-            Authorization: `Bearer ${access_token}`
-          }
-        })
-        .then(response => {
-          console.log(response.data);
-          setUserData(response.data);
-          setLoading(false);
-        })
-        .catch(error => {
-          console.error("Error fetching user information:", error);
-          setLoading(false);
-        });
-      })
-      .catch(error => {
-        console.error("Error exchanging code for access token:", error);
-        setLoading(false);
-      });
-    }
-  }, []);
-
-  const handleOAuthClick = () => {
-    const oauthUrl = `https://zoom.us/oauth/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL}`;
-    window.location.href = oauthUrl;
-  };
-
-  return (
-    <div>
-      <h1>Zoom OAuth Integration</h1>
-      {loading ? (
-        <p>Loading...</p>
-      ) : userData ? (
-        <div>
-          <h2>Hello {userData.first_name} {userData.last_name}!</h2>
-          <p>{userData.role_name}, {userData.company}</p>
-          <img src={userData.pic_url} alt="User" />
-        </div>
-      ) : (
-        <button onClick={handleOAuthClick}>Authenticate with Zoom</button>
-      )}
-    </div>
-  );
-};
-
-export default Meeting;
