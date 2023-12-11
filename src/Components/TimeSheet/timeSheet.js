@@ -12,7 +12,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import Paper from "@mui/material/Paper";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -135,12 +134,11 @@ const TimeSheet = () => {
     <div>
       <DashBoard>
         <div className="addnew">
-          <h1 className="Heading">Time Sheet</h1>
           <div className="table">
-            <div>
+          
               <form onSubmit={addTimeSheet}>
-                <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableContainer>
+                  <Table aria-label="simple table">
                     <TableHead>
                       <TableRow>
                         <TableCell align="center" colSpan={2}>
@@ -163,7 +161,7 @@ const TimeSheet = () => {
                       <TableRow>
                         <TableCell align="center">
                           <TextField
-                            sx={{ width: 50 }}
+                       
                             label="00:00"
                             variant="standard"
                             name="MTimeIn"
@@ -176,7 +174,7 @@ const TimeSheet = () => {
                         </TableCell>
                         <TableCell align="center">
                           <TextField
-                            sx={{ width: 50 }}
+                           
                             label="00:00"
                             variant="standard"
                             name="MTimeOut"
@@ -189,7 +187,7 @@ const TimeSheet = () => {
                         </TableCell>
                         <TableCell align="center">
                           <TextField
-                            sx={{ width: 50 }}
+                         
                             label="00:00"
                             variant="standard"
                             name="ATimeIn"
@@ -202,7 +200,7 @@ const TimeSheet = () => {
                         </TableCell>
                         <TableCell align="center">
                           <TextField
-                            sx={{ width: 50 }}
+                           
                             label="00:00"
                             variant="standard"
                             name="ATimeOut"
@@ -225,14 +223,11 @@ const TimeSheet = () => {
                   </Table>
                 </TableContainer>
               </form>
-            </div>
           </div>
         </div>
         <div className="TimeSheet-container">
-          <Paper
-            sx={{ width: "99%", m: 2, overflow: "hidden", zIndex: "2000" }}
-          >
-            <TableContainer sx={{ maxHeight: 440 }} className="Tablecontainer">
+      
+            <TableContainer>
               <Table stickyHeader aria-label="sticky table">
                 <TableHead>
                   <TableRow>
@@ -310,7 +305,7 @@ const TimeSheet = () => {
                 </TableBody>
               </Table>
             </TableContainer>
-          </Paper>
+
         </div>
       </DashBoard>
     </div>

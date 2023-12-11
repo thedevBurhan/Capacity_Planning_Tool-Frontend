@@ -217,7 +217,6 @@ const Personal = () => {
       <DashBoard>
         <div className="addnew">
           <h1 className="Heading">Sticky Wall </h1>
-
           <Box
             sx={{
               display: "flex",
@@ -238,7 +237,7 @@ const Personal = () => {
                 aria-haspopup="true"
                 aria-expanded={opens ? "true" : undefined}
               >
-                <AddCircleOutlineOutlinedIcon></AddCircleOutlineOutlinedIcon>
+                <AddCircleOutlineOutlinedIcon size="small"></AddCircleOutlineOutlinedIcon>
               </IconButton>
             </Tooltip>
           </Box>
@@ -336,7 +335,7 @@ const Personal = () => {
             </div>
           </Menu>
         </div>
-        <p className="note">Please Wait Few Seconds to retrive data... </p>
+        <p className="note">Please Wait Few Seconds to retrive <i>personal</i> notes... </p>
         <div className="StickyWall-container">
           {todolist.map((todolist, idx) => (
             <div

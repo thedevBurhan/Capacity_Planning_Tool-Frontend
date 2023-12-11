@@ -337,7 +337,7 @@ const Work = () => {
             </div>
           </Menu>
         </div>
-        <p className="note">Please Wait Few Seconds to retrive data... </p>
+        <p className="note">Please Wait Few Seconds to retrive <i>work</i> notes... </p>
         <div className="StickyWall-container">
           {/* <Paper> */}
           {todolist.map((todolist, idx) => (
