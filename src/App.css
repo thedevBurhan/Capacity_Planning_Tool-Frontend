@@ -244,6 +244,9 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
+/* .QajuHzlZleFtiTUp_E8u{
+  width: 500px;
+} */
 @media (max-width: 786px) {
   .app-heading {
     font-size: 2rem;
@@ -272,3 +275,4 @@ header {
     font-size: 12px;
   }
 }
+
