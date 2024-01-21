@@ -6,9 +6,9 @@ import React, { useEffect }  from "react";
 // import Backdrop from '@mui/material/Backdrop';
 // import CircularProgress from '@mui/material/CircularProgress';
 // import Button from '@mui/material/Button';
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 // //configure thhe environment
-dotenv.config();
+// dotenv.config();
 
 
 const Meeting = () => {
