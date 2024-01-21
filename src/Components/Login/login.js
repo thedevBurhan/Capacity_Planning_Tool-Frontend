@@ -66,7 +66,7 @@ const Login = () => {
   const handleLogin = async (userInfo) => {
     // console.log(userInfo)
     const res = await fetch(
-      `https://capacity-planning-tool-backend.vercel.app/users/login`,
+      `https://capacity-planning-tool-backened.vercel.app/users/login`,
       {
         method: "POST",
         body: JSON.stringify(userInfo),

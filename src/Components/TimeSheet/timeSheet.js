@@ -43,7 +43,7 @@ const TimeSheet = () => {
       let y = window.localStorage.getItem("id");
       // console.log(y);
       let req = await axios.get(
-        `https://capacity-planning-tool-backend.vercel.app/timeSheet/specificUser/${y}`,
+        `https://capacity-planning-tool-backened.vercel.app/timeSheet/specificUser/${y}`,
         {
           headers: {
             authtoken: window.localStorage.getItem("token"),
@@ -71,7 +71,7 @@ const TimeSheet = () => {
     // console.log(id)
     try {
       let req = await axios.delete(
-        `https://capacity-planning-tool-backend.vercel.app/timeSheet/deleteTimeSheetData/${id}`,
+        `https://capacity-planning-tool-backened.vercel.app/timeSheet/deleteTimeSheetData/${id}`,
         {
           headers: {
             authtoken: window.localStorage.getItem("token"),
@@ -97,7 +97,7 @@ const TimeSheet = () => {
     e.preventDefault();
     try {
       let req = await axios.post(
-        `https://capacity-planning-tool-backend.vercel.app/timeSheet/`,
+        `https://capacity-planning-tool-backened.vercel.app/timeSheet/`,
         {
           userid: window.localStorage.getItem("id"),
           MTimeIn,

@@ -54,7 +54,7 @@ const Work = () => {
       let y = window.localStorage.getItem("id");
       // console.log(y);
       let req = await axios.get(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/specificUser/${y}`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/specificUser/${y}`,
         {
           headers: {
             authtoken: window.localStorage.getItem("token"),
@@ -83,7 +83,7 @@ const Work = () => {
     // console.log(id)
     try {
       let req = await axios.delete(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/deleteToDoListData/${id}`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/deleteToDoListData/${id}`,
         {
           headers: {
             authtoken: window.localStorage.getItem("token"),
@@ -109,7 +109,7 @@ const Work = () => {
     e.preventDefault();
     try {
       let req = await axios.post(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/`,
         {
           userid: window.localStorage.getItem("id"),
           type,
@@ -154,7 +154,7 @@ const Work = () => {
       const types = window.localStorage.getItem("Work");
       console.log(userId);
       const response = await axios.post(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/categoryForSpecificUser/${userId}/${types}`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/categoryForSpecificUser/${userId}/${types}`,
         // Request body data should be passed as the second argument
         null,
         {
@@ -201,15 +201,7 @@ const Work = () => {
       //   });
     }
   };
-  // StickyWall-container theme color
-  function getRandomColor() {
-    const letters = "012348ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+
 
   return (
     <div>
@@ -344,7 +336,7 @@ const Work = () => {
             <div
               className="card"
               key={idx}
-              style={{ backgroundColor: getRandomColor() }}
+             
             >
               <div className="control">
                 <ListItemIcon

@@ -54,7 +54,7 @@ const Personal = () => {
       let y = window.localStorage.getItem("id");
       // console.log(y);
       let req = await axios.get(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/specificUser/${y}`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/specificUser/${y}`,
         {
           headers: {
             authtoken: window.localStorage.getItem("token"),
@@ -82,7 +82,7 @@ const Personal = () => {
     // console.log(id)
     try {
       let req = await axios.delete(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/deleteToDoListData/${id}`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/deleteToDoListData/${id}`,
         {
           headers: {
             authtoken: window.localStorage.getItem("token"),
@@ -108,7 +108,7 @@ const Personal = () => {
     e.preventDefault();
     try {
       let req = await axios.post(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/`,
         {
           userid: window.localStorage.getItem("id"),
           type,
@@ -152,7 +152,7 @@ const Personal = () => {
       const types = window.localStorage.getItem("Personal");
       // console.log(userId);
       const response = await axios.post(
-        `https://capacity-planning-tool-backend.vercel.app/toDoListdata/categoryForSpecificUser/${userId}/${types}`,
+        `https://capacity-planning-tool-backened.vercel.app/toDoListdata/categoryForSpecificUser/${userId}/${types}`,
         // Request body data should be passed as the second argument
         null,
         {
@@ -199,18 +199,8 @@ const Personal = () => {
       //   });
     }
   };
-  // StickyWall-container theme color
-  function getRandomColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    if (color === "#000000") {
-      color = "#f0f0f0";
-    }
-    return color;
-  }
+ 
+
 
   return (
     <div>
@@ -341,7 +331,7 @@ const Personal = () => {
             <div
               className="card"
               key={idx}
-              style={{ backgroundColor: getRandomColor() }}
+             
             >
               <div className="control">
                 <ListItemIcon
