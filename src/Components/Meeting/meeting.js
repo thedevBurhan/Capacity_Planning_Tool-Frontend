@@ -1,8 +1,8 @@
-import React, { useEffect }  from "react";
-// import DashBoard from "../DashBoard/Dashboard.js";
-// import Groups3Icon from '@mui/icons-material/Groups3';
-// import { Tooltip } from "@mui/material";
-// import gifs from "./Zoom.gif";
+import React  from "react";
+import DashBoard from "../DashBoard/Dashboard.js";
+import Groups3Icon from '@mui/icons-material/Groups3';
+import { Tooltip } from "@mui/material";
+import gifs from "./Zoom.gif";
 // import Backdrop from '@mui/material/Backdrop';
 // import CircularProgress from '@mui/material/CircularProgress';
 // import Button from '@mui/material/Button';
@@ -10,66 +10,33 @@ import React, { useEffect }  from "react";
 // //configure thhe environment
 // dotenv.config();
 
-
 const Meeting = () => {
-  // Get Zoom OAuth credentials from environment variables
-  const clientId = process.env.REACT_APP_CLIENTID;
-  const redirectUri = process.env.REACT_APP_REDIRECTURL;
 
-  // Construct Zoom OAuth URL
-  const zoomAuthUrl = `https://zoom.us/oauth/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}`;
-
-  useEffect(() => {
-    // Function to handle the Zoom redirect after authorization
-    const handleZoomRedirect = async () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const code = urlParams.get('code');
-
-      if (code) {
-        // Send the authorization code to your server
-        try {
-          const response = await fetch('/your-server-endpoint', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ code }),
-          });
-
-          if (response.ok) {
-            // Handle successful response (e.g., display user data)
-            const userData = await response.json();
-            console.log('User Data:', userData);
-          } else {
-            // Handle error response
-            console.error('Error fetching access token:', response.statusText);
-          }
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      } else {
-        console.error('Authorization code not found in URL.');
-      }
-    };
-
-    // Call the handleZoomRedirect function when the component mounts
-    handleZoomRedirect();
-  }, []);
-
-  const startZoomOAuth = () => {
-    // Redirect the user to the Zoom OAuth URL
-    window.location.href = zoomAuthUrl;
+  const handleIconClick = () => {
+    const linkUrl = "https://us05web.zoom.us/j/8130158712?pwd=L59xJLy2NbCJzzDj9wDemNA7LnKYDk.1";
+    window.open(linkUrl, "_blank");
   };
-
   return (
     <div>
-      <button onClick={startZoomOAuth}>Authorize with Zoom</button>
-    </div>
-  );
+    <DashBoard>
+      <div className="addnew">
+      <Tooltip title="Click Me">
+        <h1 className="Heading" onClick={handleIconClick}> Create Meeting 
+        <span className="dash">----</span> <Groups3Icon/></h1>
+       </Tooltip>
+      </div>
+     <div className=" giff">
+     <img className="imggifs" src={gifs} alt="Planning" />
+     </div>
+          
+        
+    </DashBoard>
+  </div>
+  )  
 };
 
-export default Meeting;
 
+export default Meeting;
 
 // const Meeting = () => {
 //   // const [open, setOpen] = React.useState(false);
