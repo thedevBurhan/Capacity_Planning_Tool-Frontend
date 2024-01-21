@@ -12,9 +12,11 @@ import React, { useEffect }  from "react";
 
 
 const Meeting = () => {
-
+  // Get Zoom OAuth credentials from environment variables
   const clientId = process.env.REACT_APP_CLIENTID;
   const redirectUri = process.env.REACT_APP_REDIRECTURL;
+
+  // Construct Zoom OAuth URL
   const zoomAuthUrl = `https://zoom.us/oauth/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}`;
 
   useEffect(() => {
@@ -63,11 +65,11 @@ const Meeting = () => {
     <div>
       <button onClick={startZoomOAuth}>Authorize with Zoom</button>
     </div>
-  );  
+  );
 };
 
-
 export default Meeting;
+
 
 // const Meeting = () => {
 //   // const [open, setOpen] = React.useState(false);
